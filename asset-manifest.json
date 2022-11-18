@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "https://roryjs.github.io/cai-fe/static/css/main.c588f9d1.css",
-    "main.js": "https://roryjs.github.io/cai-fe/static/js/main.9f3017cd.js",
+    "main.css": "https://roryjs.github.io/cai-fe/static/css/main.c2d1069c.css",
+    "main.js": "https://roryjs.github.io/cai-fe/static/js/main.0a495c35.js",
     "static/js/787.092181ff.chunk.js": "https://roryjs.github.io/cai-fe/static/js/787.092181ff.chunk.js",
     "index.html": "https://roryjs.github.io/cai-fe/index.html",
-    "main.c588f9d1.css.map": "https://roryjs.github.io/cai-fe/static/css/main.c588f9d1.css.map",
-    "main.9f3017cd.js.map": "https://roryjs.github.io/cai-fe/static/js/main.9f3017cd.js.map",
+    "main.c2d1069c.css.map": "https://roryjs.github.io/cai-fe/static/css/main.c2d1069c.css.map",
+    "main.0a495c35.js.map": "https://roryjs.github.io/cai-fe/static/js/main.0a495c35.js.map",
     "787.092181ff.chunk.js.map": "https://roryjs.github.io/cai-fe/static/js/787.092181ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c588f9d1.css",
-    "static/js/main.9f3017cd.js"
+    "static/css/main.c2d1069c.css",
+    "static/js/main.0a495c35.js"
   ]
 }
