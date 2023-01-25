@@ -66,6 +66,36 @@ function InsurerTrueTraveller() {
           </Text>
         </Text>
         <Text>
+          <Title order={2}>Flexibility</Title>
+          <Title order={4}>Already travelling</Title>
+          <Text>
+            TrueTraveller offers the option to take out insurance after you have
+            left home already. There is a waiting period of 48 hours before the
+            insurance is valid.
+          </Text>
+          <Title order={4}>Top-up insurance</Title>
+          <Text>
+            TrueTraveller does not offer dedicated "Top-up insurance" which you
+            could use in addition to another policy. For their standard single
+            trip policies, the policy "starts when you leave your home to
+            commence your trip" and therefore you may not be covered if the
+            dates selected do not cover the start of your trip. However, you
+            could use the "Already Travelling" policy and buy the insurance
+            after the start of your triptrip to only include the dates of your
+            activity. Truetraveller offer a "True Value" package without extras
+            such as travel delay compensation which could be used.
+          </Text>
+
+          <Text>
+            TrueTraveller also offers a number of additional services and
+            benefits that can be added to their insurance policies. These
+            include 24/7 emergency assistance, access to a global network of
+            medical providers, and coverage for lost or stolen luggage. The
+            company also offers a range of optional extras, such as travel delay
+            insurance and trip cancellation insurance.
+          </Text>
+        </Text>
+        <Text>
           <Title order={2}>Activites</Title>
           <Text>
             TrueTraveller covers 92 activites, with 4 different "Activity Pack"
@@ -109,23 +139,7 @@ function InsurerTrueTraveller() {
             not cover Paramotoring.
           </Text>
         </Text>
-        <Text>
-          <Title order={2}>Flexibility</Title>
-          <Text>
-            TrueTraveller offers both the ability to purchase a policy when
-            you're already abroad and if you only have a one-way ticket. They
-            also offer a "True Value" package without extras such as travel
-            delay compensation which could be used as add-on insurance.
-          </Text>
-          <Text>
-            TrueTraveller also offers a number of additional services and
-            benefits that can be added to their insurance policies. These
-            include 24/7 emergency assistance, access to a global network of
-            medical providers, and coverage for lost or stolen luggage. The
-            company also offers a range of optional extras, such as travel delay
-            insurance and trip cancellation insurance.
-          </Text>
-        </Text>
+
         <br />
         <Text italic="true" weight="700">
           All information provided is indicative and may be out of date - you
