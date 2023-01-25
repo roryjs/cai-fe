@@ -1,0 +1,21 @@
+h1 {
+
+}
+
+.title-image {
+    filter: blur(3px);
+}
+
+.text-container {
+    margin-top: -400px;
+    h1:first-child {
+        height: 300px;
+        color: white;
+        text-shadow: 1px;
+        font-size: 5em;
+        filter: blur(0);
+    }
+    div.mantine-Text-root, .mantine-Image-root {
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,62 @@
+.menu-link {
+  display: block;
+  line-height: 1px;
+  padding: 14px 10px;
+  color: #495057;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    background-color: #f8f9fa;
+  }
+}
+
+.main-container {
+
+
+      @media only screen and (min-width: 1086px) {
+          padding: 140px 120px;
+
+          .quote-image {
+              width: 150px !important;
+              border-right: "1px solid lightgrey",
+          }
+      }
+
+      @media only screen and (max-width: 1086px) {
+          padding: 120px 120px;
+
+          h1 {
+              font-size: 25px;
+          }
+
+          .quote-image {
+              margin-bottom: 0px !important;
+              
+          }
+
+      }
+
+      @media only screen and (max-width: 768px) {
+          margin-top: 0px;
+          padding: 80px 10px 40px 10px;
+      }
+
+      @media only screen and (max-width: 350px) {
+          padding: 0 10px 10px 10px;
+      }
+        
+  }
+
+  .mantine-bizhyd {
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
+
+  }
+
+
+.mantine-Menu-item {
+  width: 150px;
+}
