@@ -1,4 +1,3 @@
-import "@/styles/globals.css";
 import "@/styles/App.scss";
 import "@/styles/Landing.scss";
 import "@/styles/TextPages.scss";
@@ -107,6 +106,12 @@ export default function App({ Component, pageProps }) {
                     </Menu.Item>
                     <Menu.Item component={Link} href="/insurers/snowcard">
                       Snowcard
+                    </Menu.Item>
+                    <Menu.Item
+                      component={Link}
+                      href="/insurers/sportscoverdirect"
+                    >
+                      SportsCover direct
                     </Menu.Item>
                     <Menu.Item component={Link} href="/insurers/truetraveller">
                       TrueTraveller
