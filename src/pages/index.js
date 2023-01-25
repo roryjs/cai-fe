@@ -56,10 +56,10 @@ function Landing() {
       e.target.altitude != ""
     ) {
       if (e.target.dates) {
-        var startDate = new Date(e.target.dates.value.split(" – ")[0])
+        var startDate = new Date(e.target.dates.value.split(" – ")[0] + " UTC")
           .toISOString()
           .substring(0, 10);
-        var endDate = new Date(e.target.dates.value.split(" – ")[1])
+        var endDate = new Date(e.target.dates.value.split(" – ")[1] + " UTC")
           .toISOString()
           .substring(0, 10);
       }
