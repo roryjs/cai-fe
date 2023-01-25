@@ -38,6 +38,7 @@ export const listQuotes = (list) => {
         marginBottom: 15,
         overflow: "hidden",
       }}
+      key={quote.insurer}
     >
       <MediaQuery
         query="(max-width: 1000px)"
