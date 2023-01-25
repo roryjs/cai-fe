@@ -15,6 +15,7 @@
     "@mantine/dates": "^5.10.2",
     "@mantine/hooks": "^5.10.2",
     "@mantine/next": "^5.10.2",
+    "@mantine/ssr": "^5.10.2",
     "@next/font": "13.1.5",
     "@tabler/icons": "^2.0.0",
     "dayjs": "^1.11.7",
