@@ -153,8 +153,7 @@ function Landing() {
     <div>
       <Head>
         <title>
-          Compare Adventure & Extreme Sports Insurers |
-          CompareAdventureInsurance
+          Compare Adventure & Extreme Sports Travel Insurance quotes
         </title>
         <meta
           name="description"
