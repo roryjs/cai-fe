@@ -7,8 +7,10 @@ import {
   Button,
   Image,
   BackgroundImage,
+  Center,
 } from "@mantine/core";
 import Head from "next/head";
+import { insurerList } from "../../components/static.js";
 
 const treks = [
   {
@@ -60,7 +62,7 @@ function TrekkingAndes() {
   return (
     <div>
       <Head>
-        <title>Trekking in the Andes | CompareAdventureInsurance</title>
+        <title>Andes Trekking Insurance | CompareAdventureInsurance</title>
       </Head>
       <BackgroundImage className="title-image" src="/images/trekking-andes.jpg">
         <div
@@ -68,43 +70,77 @@ function TrekkingAndes() {
         ></div>
       </BackgroundImage>
       <Container className="main-container text-container" size="xl">
-        <Title align="center">Trekking in the Andes</Title>
+        <Title align="center">Andes Trekking Insurance</Title>
         <Text>
-          <p>
-            The Andes mountain range, which runs along the western coast of
-            South America, offers some of the most stunning and challenging
-            trekking routes in the world. From the towering peaks and glacial
-            valleys of Patagonia, to the lush forests and towering waterfalls of
-            the Amazon Basin, the Andes provide a wealth of opportunities for
-            trekkers of all levels of ability and experience. One of the most
-            famous trekking routes in the Andes is the Inca Trail, which leads
-            to the ancient Inca city of Machu Picchu in Peru. The trail, which
-            passes through the Andean mountains and passes by several Inca
-            ruins, offers breathtaking views of the surrounding landscape and a
-            glimpse into the history and culture of the region. The trek
-            typically takes four days to complete, and can be challenging due to
-            the high altitude and rugged terrain.
-          </p>
-          <p>
-            Another popular trekking destination in the Andes is Patagonia,
-            which is home to some of the highest and most rugged peaks in the
-            range. Trekkers can explore the stunning landscapes of Torres del
-            Paine National Park in Chile, which offers a variety of trekking
-            routes ranging from easy, day hikes to challenging multi-day
-            expeditions. The park is famous for its towering peaks, glaciers,
-            and crystal-clear lakes, and provides a unique opportunity to see
-            some of the most beautiful and unspoiled scenery in the world.
-          </p>
+          The Andes, a mountain range that runs along the western coast of South
+          America, is home to some of the world's most stunning trekking
+          destinations. From the mighty Aconcagua in Argentina to the surreal
+          beauty of Peru's Cordillera Blanca, the Andes offer an unrivaled
+          adventure experience to trekkers and mountaineers alike. However,
+          before you head out on your Andean journey, it is essential to
+          understand the insurance options available to protect yourself and
+          your trip investment.
+        </Text>
+
+        <Title order={2}>Medical and Rescue Cover</Title>
+        <Text>
+          Medical and rescue cover is perhaps the most important aspect of your
+          trekking insurance. In the Andes, unexpected medical emergencies can
+          arise due to altitude sickness, sudden weather changes, and other
+          factors. Having the right insurance cover in place can help you access
+          prompt and efficient medical treatment, should the need arise. A
+          comprehensive insurance policy should include coverage for medical
+          evacuation, hospitalization, and emergency medical expenses incurred
+          during your trek.
         </Text>
 
         <Text>
+          When choosing an insurance policy, be sure to review the terms and
+          conditions, including the level of coverage provided, exclusions, and
+          any limitations. It is also essential to ensure that the policy covers
+          the specific trek you plan to undertake, as well as any additional
+          activities you may engage in, such as rock climbing or ice climbing.
+        </Text>
+
+        <Title order={2}>Altitude Limits</Title>
+        <Text>
+          Another important consideration when choosing trekking insurance is
+          altitude limits. Many insurance policies have a maximum altitude
+          limit, beyond which coverage may not be available. This is
+          particularly important for trekkers and mountaineers who plan to
+          tackle high peaks in the Andes, such as Aconcagua, which stands at
+          6,962 meters (22,841 feet).
+        </Text>
+
+        <Text>
+          When reviewing your insurance options, be sure to check the altitude
+          limits provided and choose a policy that offers adequate coverage for
+          the trek you plan to undertake. You can also consider purchasing
+          additional coverage for high altitude activities if your planned trek
+          exceeds the standard policy limits.
+        </Text>
+        <Text>
+          There are several insurance providers that offer trekking insurance
+          for the Andes. Here is a list of some of the most popular options:
+        </Text>
+
+        {insurerList}
+        <Text>
+          It can be difficult and time consuming to figure out which insurers
+          would cover me and which was the cheapest. That's why I made this
+          website! If you click the button below, you'll be able to instantly
+          find out which insurers will cover your trek and get a quote.
+        </Text>
+        <Center>
+          <Button size="lg" radius="lg" color="red" component="a" href="/">
+            Compare Insurers now!
+          </Button>
+        </Center>
+        <br />
+        <br />
+        <br />
+        <Text>
           <Title order={2}>Treks</Title>
-          <p>
-            Note that in Nepal, there are 28 "Trekking Peaks" (which require a
-            permit to climb) but this is very misleading as all of these require
-            climbing or mountaineering, with rope, crampons and ice axes
-            required. Popular treks include:
-          </p>
           <Table>
             <thead>
               <tr>
@@ -116,40 +152,6 @@ function TrekkingAndes() {
             <tbody>{rows}</tbody>
           </Table>
         </Text>
-        <Text>
-          <Title order={2}>Trekking agencies</Title>
-          <p>
-            Generally, there are two types of trekking agencies; locally ran and
-            operated agencies and foreign agencies. Often the foreign agencies
-            will actually use local agency, while somtimes providing an
-            aditional international mountain guide.
-          </p>
-          <p>
-            The advantage of an international agency is that you can trust that
-            all arrangements will be made and you will have a point of contact
-            that speaks your native language. However, often you will end up
-            having the exact same trekking experience as if you had gone
-            directly with a local agency.
-          </p>
-        </Text>
-        <Title order={2}>Insurance</Title>
-        <Text>
-          <p>
-            In the event of any health issues while you are trekking in the
-            Andes, you will likely need to be evacuated to get to good
-            healthcare. Insurance is therefore essential for your safety and
-            financial security.
-          </p>
-          <p>
-            It can be difficult and time consuming to figure out which insurers
-            would cover me and which was the cheapest. That's why I made this
-            website! If you click the button below, you'll be able to instantly
-            find out which insurers will cover your trek and get a quote.
-          </p>
-        </Text>
-        <Button radius="xl" color="red" component="a" href="/">
-          Compare Insurers
-        </Button>
       </Container>
     </div>
   );

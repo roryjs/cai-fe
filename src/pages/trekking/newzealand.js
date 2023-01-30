@@ -7,8 +7,10 @@ import {
   Button,
   Image,
   BackgroundImage,
+  Center,
 } from "@mantine/core";
 import Head from "next/head";
+import { insurerList } from "../../components/static.js";
 
 const treks = [
   {
@@ -60,7 +62,9 @@ function TrekkingNewZealand() {
   return (
     <div>
       <Head>
-        <title>Trekking in Nepal | CompareAdventureInsurance</title>
+        <title>
+          New Zealand Trekking Insurance | CompareAdventureInsurance
+        </title>
       </Head>
       <BackgroundImage className="title-image" src="/images/trekking-nz.jpg">
         <div
@@ -68,17 +72,58 @@ function TrekkingNewZealand() {
         ></div>
       </BackgroundImage>
       <Container className="main-container text-container" size="xl">
-        <Title align="center">Trekking in New Zealand</Title>
+        <Title align="center">New Zealand Trekking Insurance</Title>
         <Text>
-          <p>
-            New Zealand is a paradise for trekkers, with its diverse landscapes
-            and abundant natural beauty. From the towering peaks of the Southern
-            Alps to the lush forests of the North Island, the country offers a
-            wide range of trekking routes to suit all levels of ability and
-            experience.
-          </p>
+          New Zealand is a paradise for trekkers, with its diverse landscapes
+          and abundant natural beauty. From the towering peaks of the Southern
+          Alps to the lush forests of the North Island, the country offers a
+          wide range of trekking routes to suit all levels of ability and
+          experience.
+        </Text>
+        <Title order={2}>Medical & Rescue Cover</Title>
+        <Text>
+          In the event of a medical emergency while trekking in New Zealand,
+          having proper insurance coverage can make all the difference. Your
+          trekking insurance should include medical and rescue cover that will
+          provide you with assistance and financial support if you need to be
+          evacuated from the trail or hospitalized. Make sure you read the
+          policy carefully and understand what is and isn't covered, such as
+          whether it covers rescue by helicopter or not. Don't forget to carry
+          your insurance policy and contact details with you at all times when
+          trekking.
         </Text>
 
+        <Title order={2}>Altitude Limits</Title>
+        <Text>
+          Some trekking insurance policies may have altitude limits, meaning
+          that they only cover you up to a certain elevation. If you're planning
+          to trek in the higher elevations of New Zealand, it's essential to
+          make sure your insurance policy covers you in these areas. Some
+          trekkers choose to purchase supplementary insurance specifically for
+          high-altitude trekking, so it's worth considering this option if your
+          main insurance policy has altitude restrictions.
+        </Text>
+        <Title order={2}>Insurers</Title>
+        <Text>
+          There are several insurance providers that offer trekking insurance
+          for New Zealand. Here is a list of some of the most popular options:
+        </Text>
+        {insurerList}
+        <Text>
+          When I first visited New Zealand, I found it difficult and time
+          consuming to figure out which insurers would cover me and which was
+          the cheapest. That's why I made this website! If you click the button
+          below, you'll be able to instantly find out which insurers will cover
+          your trek and get a quote.
+        </Text>
+        <Center>
+          <Button size="lg" radius="lg" color="red" component="a" href="/">
+            Compare Insurers now!
+          </Button>
+        </Center>
+        <br />
+        <br />
+        <br />
         <Text>
           <Title order={2}>Treks</Title>
           <p>
@@ -109,41 +154,6 @@ function TrekkingNewZealand() {
             <tbody>{rows}</tbody>
           </Table>
         </Text>
-        <Text>
-          <Title order={2}>Trekking agencies</Title>
-          <p>
-            Generally, there are two types of trekking agencies; locally ran and
-            operated agencies and foreign agencies. Often the foreign agencies
-            will actually use local agency, while somtimes providing an
-            aditional international mountain guide.
-          </p>
-          <p>
-            The advantage of an international agency is that you can trust that
-            all arrangements will be made and you will have a point of contact
-            that speaks your native language. However, often you will end up
-            having the exact same trekking experience as if you had gone
-            directly with a local agency.
-          </p>
-        </Text>
-        <Title order={2}>Insurance</Title>
-        <Text>
-          <p>
-            In the event of any healthcare you are trekking in New Zealand, you
-            will likely need to be evacuated by helicopter to a major hospital
-            and have potentially expensive repatriation. Insurance is therefore
-            essential for your safety and financial security.
-          </p>
-          <p>
-            When I first visited New Zealand, I found it difficult and time
-            consuming to figure out which insurers would cover me and which was
-            the cheapest. That's why I made this website! If you click the
-            button below, you'll be able to instantly find out which insurers
-            will cover your trek and get a quote.
-          </p>
-        </Text>
-        <Button radius="xl" color="red" component="a" href="/">
-          Compare Insurers
-        </Button>
       </Container>
     </div>
   );

@@ -15,30 +15,48 @@ export const logos = {
 
 export const insurerDetails = {
   adventures_direct: {
+    name: "Adventures Direct",
     quote_url: "https://quote.adventurescover.co.uk/trip-details",
     read_more_page: "/insurer/adventures_direct",
   },
   bigcat: {
+    name: "Big Cat",
     quote_url: "https://www.bigcattravelinsurance.com",
     read_more_page: "/insurer/bigcat",
   },
   campbell_irvine: {
+    name: "Campbell Irvine",
     quote_url: "https://www.campbellirvinedirect.com/CIDirect/",
     read_more_page: "/insurer/campbell_irvine",
   },
   dogtag: {
+    name: "Dogtag",
     quote_url: "https://www.dogtag.co.uk/quote/",
     read_more_page: "/insurer/dogtag",
   },
   snowcard: {
+    name: "Snowcard",
     quote_url: "https://www.snowcard.co.uk",
     read_more_page: "/insurer/snowcard",
   },
   truetraveller: {
+    name: "TrueTraveller",
     quote_url: "https://www.truetraveller.com",
     read_more_page: "/insurer/truetraveller",
   },
 };
+
+export const insurerList = (
+  <ul>
+    {Object.values(insurerDetails).map(({ name, quote_url }) => (
+      <li key={name}>
+        <a href={quote_url} target="_blank">
+          {name}
+        </a>
+      </li>
+    ))}
+  </ul>
+);
 
 export const insurerNames = {
   adventures_direct: "Adventures Direct",

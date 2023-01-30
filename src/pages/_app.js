@@ -122,7 +122,7 @@ export default function App({ Component, pageProps }) {
                   <Menu.Target>
                     <a className="menu-link">
                       <Center>
-                        <span>Trekking</span>
+                        <span>Trekking Insurance</span>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           class="icon icon-tabler icon-tabler-chevron-down"
@@ -142,6 +142,9 @@ export default function App({ Component, pageProps }) {
                     </a>
                   </Menu.Target>
                   <Menu.Dropdown>
+                    <Menu.Item component={Link} href="/trekking/insurance">
+                      Trekking Insurance
+                    </Menu.Item>
                     <Menu.Item component={Link} href="/trekking/andes">
                       Andes
                     </Menu.Item>
