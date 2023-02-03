@@ -50,7 +50,7 @@ export const insurerList = (
   <ul>
     {Object.values(insurerDetails).map(({ name, quote_url }) => (
       <li key={name}>
-        <a href={quote_url} target="_blank">
+        <a href={quote_url} target="_blank" rel="noreferrer">
           {name}
         </a>
       </li>
