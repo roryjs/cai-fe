@@ -186,7 +186,10 @@ function Landing() {
                   </span>
                   ?
                 </Title>
-                <Text align="center">Instantly get quotes from insurers:</Text>
+                <Text align="center">
+                  Instantly get quotes from major insurers for trekking,
+                  off-piste skiing, mountaineering and more:
+                </Text>
               </Container>
               <Flex
                 align="stretch"
