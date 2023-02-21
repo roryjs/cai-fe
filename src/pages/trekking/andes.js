@@ -127,9 +127,9 @@ function TrekkingAndes() {
         {insurerList}
         <Text>
           It can be difficult and time consuming to figure out which insurers
-          would cover me and which was the cheapest. That's why I made this
-          website! If you click the button below, you'll be able to instantly
-          find out which insurers will cover your trek and get a quote.
+          would cover me and which was the cheapest. If you click the button
+          below, you'll be able to instantly find out which insurers will cover
+          your trek and get a quote.
         </Text>
         <Center>
           <Button size="lg" radius="lg" color="red" component="a" href="/">

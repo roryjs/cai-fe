@@ -133,7 +133,7 @@ function Landing() {
           setProgress(
             <Stack>
               <Center>
-                <Text align="center">
+                <Text align="center" color="white">
                   <p>Getting {e} quote...</p>
                   <Progress color="red" value={(100 * i) / 6} />
                   <p>This could take up to 10 seconds</p>
@@ -427,7 +427,7 @@ function Landing() {
                           radius="xl"
                           size="md"
                           type="submit"
-                          // loading={isGettingQuote}
+                          loading={isGettingQuote}
                         >
                           Compare Insurers
                         </Button>

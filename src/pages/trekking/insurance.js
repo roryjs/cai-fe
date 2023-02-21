@@ -9,6 +9,7 @@ import {
   BackgroundImage,
 } from "@mantine/core";
 import Head from "next/head";
+import { insurerList } from "../../components/static.js";
 
 function TrekkingInsurance() {
   return (
@@ -68,13 +69,11 @@ function TrekkingInsurance() {
 
         <Title order={2}>Insurers</Title>
         <Text>
-          When looking for trekking insurance, it is important to shop around
-          and compare different policies and insurers. Some popular trekking
-          insurers include World Nomads, True Traveller, and Trekcover. It is
-          also worth checking with your travel insurance provider to see if they
-          offer trekking insurance as an add-on to their standard travel
-          insurance policy.
+          There are several insurance providers that offer trekking insurance
+          for the Andes. Here is a list of some of the most popular options:
         </Text>
+
+        {insurerList}
 
         <Text>
           When looking for trekking insurance, it is important to consider the

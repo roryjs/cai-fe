@@ -155,6 +155,14 @@ export default function App({ Component, pageProps }) {
                       New Zealand
                     </Menu.Item>
                   </Menu.Dropdown>
+                </Menu>
+                <Menu>
+                  <Link className="menu-link" href="/mountaineering/insurance">
+                    Mountaineering Insurance
+                  </Link>
+                  <Link className="menu-link" href="/skiing/insurance">
+                    Skiing Insurance
+                  </Link>
                   <Button
                     radius="xl"
                     sx={{ height: 30 }}
