@@ -158,7 +158,7 @@ function Landing() {
         </title>
         <meta
           name="description"
-          content="Compare adventure trip and extreme sports insurance now! Instantly get quotes from insurers for activities such as Trekking, Mountaineering or off-piste skiing."
+          content="Instantly get quotes from specialist insurers for activities such as Trekking, Mountaineering or off-piste skiing for certain altitudes and areas such as Nepal or the Alps."
         />
       </Head>
       <BackgroundImage src="/images/background.jpg" radius="sm">

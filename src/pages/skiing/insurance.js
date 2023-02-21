@@ -16,6 +16,10 @@ function SkiingInsurance() {
     <div>
       <Head>
         <title>Compare Off-Piste Skiing Travel Insurance quotes</title>
+        <meta
+          name="description"
+          content="Compare Skiing insurance now for Ski Touring, Off-Piste or other Winter Sports. Instantly get quotes from specialist insurers for adventure activities."
+        />
       </Head>
       <BackgroundImage className="title-image" src="/images/skiing.jpg">
         <div
