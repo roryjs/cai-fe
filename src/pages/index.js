@@ -28,11 +28,15 @@ import { DateRangePicker } from "@mantine/dates";
 import React, { useEffect, useState } from "react";
 import { listQuotes } from "../components/quotes.js";
 import { countryList, insurerNames } from "../components/static.js";
+import { useSearchParams } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
 function Landing() {
-  const getQuotes = false;
+  const searchParams = useSearchParams();
+
+  const getQuotes = searchParams.get("getQuotes") || false;
+
   // const theme = useMantineTheme();
   const [result, setResult] = useState("");
   const [progress, setProgress] = useState("");
@@ -161,310 +165,314 @@ function Landing() {
           content="Instantly find specialist insurers for activities such as Trekking, Mountaineering or off-piste skiing for certain altitudes and areas such as Nepal or the Alps."
         />
       </Head>
-      <BackgroundImage src="/images/background.jpg" radius="sm">
-        <Container id="landing" className="main-container" size="lg">
-          <Container style={{ zIndex: 1 }}>
-            <Flex
-              direction={"column"}
-              align="center"
-              gap="xl"
-              style={{ marginBottom: 40 }}
-            >
-              <Container>
-                <Title order={1} align="center" style={{}}>
-                  Need insurance for your next{" "}
-                  <span
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(rgb(238 134 165) 25%, rgb(233 15 42) 100%)",
-                      color: "transparent",
-                      backgroundClip: "text",
-                      "-webkit-background-clip": "text",
-                    }}
-                  >
-                    adventure
-                  </span>
-                  ?
-                </Title>
-                <Text align="center">
-                  Instantly find insurers for trekking, off-piste skiing,
-                  mountaineering and more:
-                </Text>
-              </Container>
-              <Flex
-                align="stretch"
-                direction="column"
-                style={{ width: "100%", maxWidth: "700px" }}
-              >
-                <Card
-                  shadow="sm"
-                  p="lg"
-                  radius="md"
-                  withBorder
-                  className="formContainer"
+      <div
+        style={{
+          backgroundImage: "url('/images/background.jpg')",
+          width: "100%",
+          height: "100%",
+          position: "fixed",
+          backgroundSize: "cover",
+          zIndex: -1000,
+        }}
+      ></div>
+      <Container id="landing" className="main-container" size="lg">
+        <Container style={{ zIndex: 1 }}>
+          <Flex
+            direction={"column"}
+            align="center"
+            gap="xl"
+            style={{ marginBottom: 40 }}
+          >
+            <Container>
+              <Title order={1} align="center" style={{}}>
+                Need insurance for your next{" "}
+                <span
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(rgb(238 134 165) 25%, rgb(233 15 42) 100%)",
+                    color: "transparent",
+                    backgroundClip: "text",
+                    "-webkit-background-clip": "text",
+                  }}
                 >
-                  <form onSubmit={(e) => handleSubmit(e)}>
-                    <Container style={{ marginBottom: 25 }}>
-                      <Flex className="formFlex" style={{ marginBottom: 10 }}>
-                        <Text className="formText">Where are you going?</Text>
-                        <Select
+                  adventure
+                </span>
+                ?
+              </Title>
+              <Text align="center">
+                Instantly find insurers for trekking, off-piste skiing,
+                mountaineering and more:
+              </Text>
+            </Container>
+            <Flex
+              align="stretch"
+              direction="column"
+              style={{ width: "100%", maxWidth: "700px" }}
+            >
+              <Card
+                shadow="sm"
+                p="lg"
+                radius="md"
+                withBorder
+                className="formContainer"
+              >
+                <form onSubmit={(e) => handleSubmit(e)}>
+                  <Container style={{ marginBottom: 25 }}>
+                    <Flex className="formFlex" style={{ marginBottom: 10 }}>
+                      <Text className="formText">Where are you going?</Text>
+                      <Select
+                        classNames={{ root: "formInput" }}
+                        name="destination"
+                        placeholder="Destination"
+                        searchable
+                        nothingFound="No options"
+                        data={countryList}
+                      />
+                    </Flex>
+                    {getQuotes ? (
+                      <Flex className="formFlex" style={{ marginBottom: 35 }}>
+                        <Text className="formText">
+                          When are you travelling?
+                        </Text>
+                        <DateRangePicker
                           classNames={{ root: "formInput" }}
-                          name="destination"
-                          placeholder="Destination"
-                          searchable
-                          nothingFound="No options"
-                          data={countryList}
+                          name="dates"
+                          placeholder="Dates"
+                          minDate={new Date()}
                         />
                       </Flex>
-                      {getQuotes ? (
-                        <Flex className="formFlex" style={{ marginBottom: 35 }}>
-                          <Text className="formText">
-                            When are you travelling?
+                    ) : (
+                      ""
+                    )}
+                    <Flex className="formFlex" style={{ marginBottom: 10 }}>
+                      <Text className="formText">Where are you resident?</Text>
+                      <Popover
+                        width={200}
+                        position="right"
+                        withArrow
+                        shadow="md"
+                        opened={popoverResidenceOpened}
+                      >
+                        <Popover.Target>
+                          <Select
+                            onFocusCapture={() =>
+                              setPopoverResidenceOpened(true)
+                            }
+                            onBlurCapture={() =>
+                              setPopoverResidenceOpened(false)
+                            }
+                            classNames={{ root: "formInput" }}
+                            name="resident_country"
+                            placeholder="Country"
+                            searchable
+                            nothingFound="No options"
+                            data={[
+                              {
+                                label:
+                                  "United Kingdom of Great Britain and Northern Ireland (the)",
+                                value: "GB",
+                              },
+                            ]}
+                          />
+                        </Popover.Target>
+                        <Popover.Dropdown sx={{ pointerEvents: "none" }}>
+                          <Text size="sm">
+                            We currently only support UK residents. More coming
+                            soon!
                           </Text>
-                          <DateRangePicker
-                            classNames={{ root: "formInput" }}
-                            name="dates"
-                            placeholder="Dates"
-                            minDate={new Date()}
-                          />
-                        </Flex>
-                      ) : (
-                        ""
-                      )}
-                      <Flex className="formFlex" style={{ marginBottom: 10 }}>
-                        <Text className="formText">
-                          Where are you resident?
-                        </Text>
-                        <Popover
-                          width={200}
-                          position="right"
-                          withArrow
-                          shadow="md"
-                          opened={popoverResidenceOpened}
-                        >
-                          <Popover.Target>
-                            <Select
-                              onFocusCapture={() =>
-                                setPopoverResidenceOpened(true)
-                              }
-                              onBlurCapture={() =>
-                                setPopoverResidenceOpened(false)
-                              }
-                              classNames={{ root: "formInput" }}
-                              name="resident_country"
-                              placeholder="Country"
-                              searchable
-                              nothingFound="No options"
-                              data={[
-                                {
-                                  label:
-                                    "United Kingdom of Great Britain and Northern Ireland (the)",
-                                  value: "GB",
-                                },
-                              ]}
-                            />
-                          </Popover.Target>
-                          <Popover.Dropdown sx={{ pointerEvents: "none" }}>
-                            <Text size="sm">
-                              We currently only support UK residents. More
-                              coming soon!
-                            </Text>
-                          </Popover.Dropdown>
-                        </Popover>
+                        </Popover.Dropdown>
+                      </Popover>
+                    </Flex>
+                    {getQuotes ? (
+                      <Flex className="formFlex" style={{ marginBottom: 35 }}>
+                        <Text className="formText">What age are you?</Text>
+                        <NumberInput
+                          classNames={{ root: "formInput" }}
+                          name="age"
+                          placeholder="Age"
+                          min={18}
+                        />
                       </Flex>
-                      {getQuotes ? (
-                        <Flex className="formFlex" style={{ marginBottom: 35 }}>
-                          <Text className="formText">What age are you?</Text>
-                          <NumberInput
+                    ) : (
+                      ""
+                    )}
+                    <Flex className="formFlex" style={{ marginBottom: 10 }}>
+                      <Text className="formText">
+                        What activity are you doing?
+                      </Text>
+                      <Popover
+                        width={200}
+                        position="right"
+                        withArrow
+                        shadow="md"
+                        opened={popoverActivityOpened}
+                      >
+                        <Popover.Target>
+                          <Select
+                            onFocusCapture={() =>
+                              setPopoverActivityOpened(true)
+                            }
+                            onBlurCapture={() =>
+                              setPopoverActivityOpened(false)
+                            }
                             classNames={{ root: "formInput" }}
-                            name="age"
-                            placeholder="Age"
-                            min={18}
+                            name="activity"
+                            placeholder="Activity"
+                            searchable
+                            nothingFound="No options"
+                            data={[
+                              {
+                                label: "Trekking",
+                                value: "trekking",
+                              },
+                              {
+                                label: "Backcountry/off-piste skiing",
+                                value: "backcountry_skiing",
+                              },
+                              {
+                                label: "Piste skiing",
+                                value: "piste_skiing",
+                              },
+                              {
+                                label: "Mountaineering",
+                                value: "mountaineering",
+                              },
+                              {
+                                label: "Rock Climbing",
+                                value: "climbing",
+                              },
+                              ,
+                              {
+                                label: "Paragliding",
+                                value: "paragliding",
+                              },
+                              {
+                                label: "Other",
+                                value: "other",
+                              },
+                            ]}
+                            value={activityValue}
+                            onChange={(e) => {
+                              if (
+                                e.includes("trekking") ||
+                                e.includes("mountaineering")
+                              ) {
+                                setShowActivityPrefs(true);
+                                setShowAltitudeSelect(true);
+                              } else if (e != "") {
+                                setShowActivityPrefs(true);
+                                setShowAltitudeSelect(false);
+                              } else {
+                                setShowActivityPrefs(false);
+                                setShowAltitudeSelect(false);
+                              }
+                              setActivityValue(e);
+                            }}
                           />
-                        </Flex>
-                      ) : (
-                        ""
-                      )}
-                      <Flex className="formFlex" style={{ marginBottom: 10 }}>
-                        <Text className="formText">
-                          What activity are you doing?
-                        </Text>
-                        <Popover
-                          width={200}
-                          position="right"
-                          withArrow
-                          shadow="md"
-                          opened={popoverActivityOpened}
-                        >
-                          <Popover.Target>
-                            <Select
-                              onFocusCapture={() =>
-                                setPopoverActivityOpened(true)
-                              }
-                              onBlurCapture={() =>
-                                setPopoverActivityOpened(false)
-                              }
-                              classNames={{ root: "formInput" }}
-                              name="activity"
-                              placeholder="Activity"
-                              searchable
-                              nothingFound="No options"
-                              data={[
-                                {
-                                  label: "Trekking",
-                                  value: "trekking",
-                                },
-                                {
-                                  label: "Backcountry/off-piste skiing",
-                                  value: "backcountry_skiing",
-                                },
-                                {
-                                  label: "Piste skiing",
-                                  value: "piste_skiing",
-                                },
-                                {
-                                  label: "Mountaineering",
-                                  value: "mountaineering",
-                                },
-                                {
-                                  label: "Rock Climbing",
-                                  value: "climbing",
-                                },
-                                ,
-                                {
-                                  label: "Paragliding",
-                                  value: "paragliding",
-                                },
-                                {
-                                  label: "Other",
-                                  value: "other",
-                                },
-                              ]}
-                              value={activityValue}
-                              onChange={(e) => {
-                                if (
-                                  e.includes("trekking") ||
-                                  e.includes("mountaineering")
-                                ) {
-                                  setShowActivityPrefs(true);
-                                  setShowAltitudeSelect(true);
-                                } else if (e != "") {
-                                  setShowActivityPrefs(true);
-                                  setShowAltitudeSelect(false);
-                                } else {
-                                  setShowActivityPrefs(false);
-                                  setShowAltitudeSelect(false);
-                                }
-                                setActivityValue(e);
-                              }}
-                            />
-                          </Popover.Target>
-                          <Popover.Dropdown sx={{ pointerEvents: "none" }}>
-                            <Text size="sm">
-                              We currently only support a few activities. Select
-                              "Other" if not listed.
-                            </Text>
-                          </Popover.Dropdown>
-                        </Popover>
-                      </Flex>
-                      {showActivityPrefs ? (
-                        <Container style={{ padding: 0 }}>
-                          {showAltitudeSelect ? (
-                            <div style={{ position: "relative" }}>
-                              <Flex
-                                className="formFlex"
-                                style={{ marginBottom: 10 }}
-                              >
-                                <Text className="formText">
-                                  Maximum altitude you will reach?
-                                </Text>
-                                <NumberInput
-                                  classNames={{ root: "formInput" }}
-                                  name="altitude"
-                                  placeholder="Altitude"
-                                  step={100}
-                                  min={0}
-                                />
-                              </Flex>
-                              <Text
-                                show
-                                style={{
-                                  position: "absolute",
-                                  top: 6,
-                                  right: 30,
-                                  color: "#adb5bd",
-                                  pointerEvents: "none",
-                                }}
-                              >
-                                metres
+                        </Popover.Target>
+                        <Popover.Dropdown sx={{ pointerEvents: "none" }}>
+                          <Text size="sm">
+                            We currently only support a few activities. Select
+                            "Other" if not listed.
+                          </Text>
+                        </Popover.Dropdown>
+                      </Popover>
+                    </Flex>
+                    {showActivityPrefs ? (
+                      <Container style={{ padding: 0 }}>
+                        {showAltitudeSelect ? (
+                          <div style={{ position: "relative" }}>
+                            <Flex
+                              className="formFlex"
+                              style={{ marginBottom: 10 }}
+                            >
+                              <Text className="formText">
+                                Maximum altitude you will reach?
                               </Text>
-                            </div>
-                          ) : (
-                            ""
-                          )}
-                          <Flex
-                            className="formFlex"
-                            style={{ marginBottom: 10 }}
-                          >
-                            <Text className="formText">
-                              Will you have a guide?
+                              <NumberInput
+                                classNames={{ root: "formInput" }}
+                                name="altitude"
+                                placeholder="Altitude"
+                                step={100}
+                                min={0}
+                              />
+                            </Flex>
+                            <Text
+                              show
+                              style={{
+                                position: "absolute",
+                                top: 6,
+                                right: 30,
+                                color: "#adb5bd",
+                                pointerEvents: "none",
+                              }}
+                            >
+                              metres
                             </Text>
-                            <Select
-                              classNames={{ root: "formInput" }}
-                              name="guide_required"
-                              placeholder="Yes/No"
-                              data={["Yes", "No"]}
-                            />
-                          </Flex>
-                        </Container>
-                      ) : null}
-                    </Container>
+                          </div>
+                        ) : (
+                          ""
+                        )}
+                        <Flex className="formFlex" style={{ marginBottom: 10 }}>
+                          <Text className="formText">
+                            Will you have a guide?
+                          </Text>
+                          <Select
+                            classNames={{ root: "formInput" }}
+                            name="guide_required"
+                            placeholder="Yes/No"
+                            data={["Yes", "No"]}
+                          />
+                        </Flex>
+                      </Container>
+                    ) : null}
+                  </Container>
 
-                    <Container>
-                      <Flex justify="center">
-                        <Button
-                          color="red"
-                          radius="xl"
-                          size="md"
-                          type="submit"
-                          loading={isGettingQuote}
-                        >
-                          Compare Insurers
-                        </Button>
-                      </Flex>
-                    </Container>
-                  </form>
-                </Card>
-              </Flex>
-              {progress ? (
-                <Container style={{ paddingBottom: 80 }}>{progress}</Container>
-              ) : (
-                ""
-              )}
-              <div style={{ position: "relative" }}>
-                <div
-                  id="results-anchor"
-                  style={{ position: "absolute", top: "-50px" }}
-                ></div>
-              </div>
-              {result ? (
-                <Container>
-                  <Text align="center" fs="italic">
-                    These insurers may be able to help you.
-                    <br /> Always confirm the insurer will cover you and the
-                    activity before purchasing.
-                  </Text>
-                </Container>
-              ) : (
-                ""
-              )}
-              <Container style={{ paddingBottom: 150 }} id="result-container">
-                {result}
-              </Container>
+                  <Container>
+                    <Flex justify="center">
+                      <Button
+                        color="red"
+                        radius="xl"
+                        size="md"
+                        type="submit"
+                        loading={isGettingQuote}
+                      >
+                        Compare Insurers
+                      </Button>
+                    </Flex>
+                  </Container>
+                </form>
+              </Card>
             </Flex>
-          </Container>
+            {progress ? (
+              <Container style={{ paddingBottom: 80 }}>{progress}</Container>
+            ) : (
+              ""
+            )}
+            <div style={{ position: "relative" }}>
+              <div
+                id="results-anchor"
+                style={{ position: "absolute", top: "-50px" }}
+              ></div>
+            </div>
+            {result ? (
+              <Container>
+                <Text align="center" fw={700} fz="lg" color="white">
+                  These insurers may be able to help you.
+                  <br /> Always confirm the insurer will cover you and the
+                  activity before purchasing.
+                </Text>
+              </Container>
+            ) : (
+              ""
+            )}
+            <Container style={{ paddingBottom: 150 }} id="result-container">
+              {result}
+            </Container>
+          </Flex>
+        </Container>
 
-          {/* <Image
+        {/* <Image
             src="/images/climbing_vector_small.svg"
             style={{
               width: "600px",
@@ -477,8 +485,7 @@ function Landing() {
               zIndex: -1,
             }}
           ></Image> */}
-        </Container>
-      </BackgroundImage>
+      </Container>
     </div>
   );
 }

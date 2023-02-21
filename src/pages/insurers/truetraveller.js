@@ -13,6 +13,9 @@ import {
 import Head from "next/head";
 
 function InsurerTrueTraveller() {
+  static getInitialProps({query}) {
+    return {query}
+  }
   return (
     <div>
       <Head>
@@ -113,30 +116,29 @@ function InsurerTrueTraveller() {
           </Text>
           <Text>
             <Title order={4}>Mountaineering</Title>
-            TrueTraveller covers technical mountaineering up to 6,000m only with
-            their "Extreme Pack". They do not require a guide. They do not cover
-            free mountaineering, climbing in remote of inaccessible regions,
-            exploratory expeditions or new routes.
+            TrueTraveller can cover technical mountaineering up to 6,000m. They
+            do not require a guide. They do not cover free mountaineering,
+            climbing in remote of inaccessible regions, exploratory expeditions
+            or new routes.
           </Text>
           <Text>
             <Title order={4}>Climbing</Title>
             TrueTraveller covers Rock Climbing (outdoor/traditional/sport
-            climbing/bolted/aid climbing - with the excpetion of soloing/Sea
-            Cliff/Ice Climbing/Big wall climbing in their "Adventure Pack". They
-            cover Ice Climbing and Sea Cliff climbing in their "Extreme Pack". A
+            climbing/bolted/aid climbing - with the exception of soloing. They
+            can also seperately cover Ice Climbing and Sea Cliff climbing. A
             guide is not required.
           </Text>
           <Text>
             <Title order={4}>Skiing</Title>
-            TrueTraveller covers backcountry/off-piste skiing/snowboard (outside
-            of the resort boundary) and limited use of snow/terrain parks
-            (beginner/intermediate only, no jumps aerials or acrobatics) with
-            their "Winter Sports" pack. They do not require a guide.
+            TrueTraveller can cover backcountry/off-piste skiing/snowboard
+            (outside of the resort boundary) and limited use of snow/terrain
+            parks (beginner/intermediate only, no jumps aerials or acrobatics)
+            with their "Winter Sports" pack. They do not require a guide.
           </Text>
           <Text>
             <Title order={4}>Paragliding</Title>
-            TrueTraveller covers paragliding with their "Extreme Pack". They do
-            not cover Paramotoring.
+            TrueTraveller can covers paragliding. They do not cover
+            Paramotoring.
           </Text>
         </Text>
 
