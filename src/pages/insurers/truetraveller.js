@@ -13,9 +13,6 @@ import {
 import Head from "next/head";
 
 function InsurerTrueTraveller() {
-  static getInitialProps({query}) {
-    return {query}
-  }
   return (
     <div>
       <Head>
