@@ -116,7 +116,7 @@ export const listQuotes = (list) => {
                 href={insurerDetails[quote.provider]?.quote_url}
                 target="_blank"
               >
-                Get a full quote
+                Get a quote
               </Button>
             </Stack>
           </MediaQuery>

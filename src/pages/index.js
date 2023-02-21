@@ -32,7 +32,7 @@ import { countryList, insurerNames } from "../components/static.js";
 const inter = Inter({ subsets: ["latin"] });
 
 function Landing() {
-  const getQuotes = true;
+  const getQuotes = false;
   // const theme = useMantineTheme();
   const [result, setResult] = useState("");
   const [progress, setProgress] = useState("");
@@ -158,7 +158,7 @@ function Landing() {
         </title>
         <meta
           name="description"
-          content="Instantly get quotes from specialist insurers for activities such as Trekking, Mountaineering or off-piste skiing for certain altitudes and areas such as Nepal or the Alps."
+          content="Instantly find specialist insurers for activities such as Trekking, Mountaineering or off-piste skiing for certain altitudes and areas such as Nepal or the Alps."
         />
       </Head>
       <BackgroundImage src="/images/background.jpg" radius="sm">
@@ -187,8 +187,8 @@ function Landing() {
                   ?
                 </Title>
                 <Text align="center">
-                  Instantly get quotes from major insurers for trekking,
-                  off-piste skiing, mountaineering and more:
+                  Instantly find insurers for trekking, off-piste skiing,
+                  mountaineering and more:
                 </Text>
               </Container>
               <Flex
@@ -436,7 +436,11 @@ function Landing() {
                   </form>
                 </Card>
               </Flex>
-              <Container style={{ paddingBottom: 80 }}>{progress}</Container>
+              {progress ? (
+                <Container style={{ paddingBottom: 80 }}>{progress}</Container>
+              ) : (
+                ""
+              )}
               <div style={{ position: "relative" }}>
                 <div
                   id="results-anchor"
@@ -446,8 +450,7 @@ function Landing() {
               {result ? (
                 <Container>
                   <Text align="center" fs="italic">
-                    All quotes are indicative and do not gaurantee that the
-                    insurer will cover you.
+                    These insurers may be able to help you.
                     <br /> Always confirm the insurer will cover you and the
                     activity before purchasing.
                   </Text>
