@@ -187,9 +187,9 @@ export default function App({ Component, pageProps }) {
           }}
         >
           <Text align="center">
-            CompareAdventureInsurance 2022. We provide only indicative
-            information on the insurance products and therefore we are not
-            regulated by the FCA.
+            Rysa Limited Trading as CompareAdventureInsurance.com. We do not
+            provide advice or information on insurance products, only indicative
+            information on insurers.
           </Text>
         </Footer>
       </AppShell>
