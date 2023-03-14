@@ -188,8 +188,8 @@ export default function App({ Component, pageProps }) {
         >
           <Text align="center">
             Rysa Limited Trading as CompareAdventureInsurance.com. We do not
-            provide advice or information on insurance products, only indicative
-            information on insurers.
+            offer advice. All information shown is indicative and should be
+            confirmed with the insurer before purchase.
           </Text>
         </Footer>
       </AppShell>

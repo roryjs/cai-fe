@@ -458,9 +458,14 @@ function Landing() {
             {result ? (
               <Container>
                 <Text align="center" fw={700} fz="lg" color="white">
-                  These insurers may be able to help you.
-                  <br /> Always confirm the insurer will cover you and the
-                  activity before purchasing.
+                  These insurers may be able to help you. It is important that
+                  you compare each insurer and product individually. <br /> We
+                  do not provide advice. The prices shown are indicative of the
+                  lowest quote an insurer might give for that activity. The
+                  actual quote may differ. It is important that you check the
+                  exact product and policy wording before you purchase to ensure
+                  the insurer will appropriately cover you and the activity you
+                  are doing.
                 </Text>
               </Container>
             ) : (
