@@ -462,7 +462,8 @@ function Landing() {
                   It is important that you compare each insurer and product
                   individually.
                 </Text>
-                <Text align="center" fw={700} fz="md" color="white">
+                <br />
+                <Text align="center" fw={700} fz="sm" color="white">
                   We do not provide advice. The prices shown are indicative of
                   the lowest quote an insurer might give for that activity. The
                   actual quote may differ. It is important that you check the
