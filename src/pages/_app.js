@@ -151,6 +151,9 @@ export default function App({ Component, pageProps }) {
                     <Menu.Item component={Link} href="/trekking/nepal">
                       Nepal
                     </Menu.Item>
+                    <Menu.Item component={Link} href="/trekking/islandpeak">
+                      Island Peak
+                    </Menu.Item>
                     <Menu.Item component={Link} href="/trekking/newzealand">
                       New Zealand
                     </Menu.Item>

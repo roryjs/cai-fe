@@ -12,7 +12,7 @@ import {
 } from "@mantine/core";
 import Head from "next/head";
 
-function InsurerSnowcard() {
+function InsurerDogtag() {
   return (
     <div>
       <Head>
@@ -27,7 +27,7 @@ function InsurerSnowcard() {
         <Title align="center">
           <Center>
             <Image
-              src="/images/truetraveller-logo.svg"
+              src="/images/dogtag-logo.png"
               align="center"
               width={400}
             ></Image>
@@ -35,75 +35,64 @@ function InsurerSnowcard() {
         </Title>
         <Text>
           <Text>
-            Snowcard is a UK-based insurer that specializes in providing travel
-            insurance for winter and extreme sports. The company was founded in
-            1991 with the aim of providing coverage
-            <Text></Text>
-            One of the key features of Snowcard's insurance policies is the
-            level of coverage they provide for winter sports activities. The
-            company offers comprehensive coverage for a wide range of
-            activities, including skiing, snowboarding, ice skating, and ice
-            climbing.
+            Dogtag is a UK-based insurer that specializes in providing travel
+            insurance for extreme sports and adventure activities. The company
+            was founded in 1999 with the aim of providing coverage for
+            adventurers and explorers.
           </Text>
-          <Text>Claims are managed by Mayday Claims.</Text>
+          <Text>
+            One of the key features of Dogtag's insurance policies is the level
+            of coverage they provide for a wide range of adventure sports and
+            activities, including skiing, snowboarding, trekking,
+            mountaineering, climbing, and more.
+          </Text>
+          <Text>Claims are managed by Dogtag themselves.</Text>
         </Text>
-
         <Text>
           <Title order={2}>Reviews</Title>
           <Text>
-            Check out reviews of Snowcard on{" "}
-            <a href="https://www.trustpilot.com/review/snowcard.co.uk">
-              Trustpilot
+            Check out reviews of Dogtag on{" "}
+            <a href="https://www.squaremouth.com/travel-insurance-providers/dogtag/reviews">
+              Squaremouth
             </a>
             .
           </Text>
-          <Text>Snowcard is generally well reviewed.</Text>
+          <Text>Dogtag is generally well reviewed.</Text>
         </Text>
         <Text>
-          <Title order={2}>Activites</Title>
+          <Title order={2}>Activities</Title>
           <Text>
-            Snowcard covers a large number of activites with clearly defined
-            defitions. You can check them all out{" "}
-            <Anchor href="https://www.snowcard.co.uk/activities-covered">
-              Snowcard
+            Dogtag covers a large number of activities with clearly defined
+            definitions. You can check them all out{" "}
+            <Anchor href="https://www.dogtag.co.uk/what-we-cover">
+              Dogtag
             </Anchor>
             .
           </Text>
           <Text>
             <Title order={4}>Trekking</Title>
-            Snowcard can cover Trekking upto 4000m in the greater ranges (e.g.
-            Nepal, South America) with their "Adventure Plus" plan and Trekking
-            upto 6000m in the greater ranges (eg, Everest base camp, Inca Trail,
-            Kilimanjaro) with their "Max Adventure" plan.
+            Dogtag can cover trekking up to 7000m in altitude with their
+            "Extreme" plan, and up to 4000m in altitude with their "Activity"
+            plan. Their policies also cover personal accident, emergency medical
+            expenses, repatriation, and more.
           </Text>
           <Text>
             <Title order={4}>Climbing</Title>
-            Snowcard can cover Sport climbing (involving permanent fixed
-            anchors) with their "Adventure Plus" plan and Multi pitch rock
-            climbing (where leader placed protection is involved) with their
-            "Max Adventure" plan. They cover Ice climbing with their "Extreme
-            Adventure" plan.
+            Dogtag covers rock climbing, ice climbing, and mountaineering up to
+            6,00m (they can quote for higher altitudes if you speak directly to
+            them). They also offer coverage for personal accident, emergency
+            medical expenses, repatriation, and more.
           </Text>
           <Text>
-            <Title order={4}>Mountaineering</Title>
-            Snowcard can cover Trekking peaks upto 7000m (as designated in the
-            Himalaya, e.g. Island Peak, Mera Peak etc) with their "Extreme
-            Adventure" plan and Mountaineering upto 7000m (professional guided
-            trips only, please submit itinerary prior to departure for
-            agreement) with their "Extreme Adventure" plan.
-          </Text>
-          <Text>
-            <Title order={4}>Skiing</Title>
-            Snowcard can cover Skiing - on and off piste with or without a guide
-            with their "Adventure Plus" pack. They can additionall cover Ski
-            touring (ascending using skins) - back country skiing or
-            snowboarding, skidoo, snowcat or helicopter skiing with their "Max
-            Adventure" plan. They can also cover a wive variety of other types
-            of snow sports.
+            <Title order={4}>Skiing and Snowboarding</Title>
+            Dogtag can cover both skiing and snowboarding on-piste, or
+            backcountry/off-piste skiing with/without a guide. They also offer
+            coverage for personal accident, emergency medical expenses,
+            repatriation, and more.
           </Text>
           <Text>
             <Title order={4}>Paragliding</Title>
-            Snowcard does not cover Paragliding or any other aerial sports.
+            Dogtag can cover Paragliding as a pilot.
           </Text>
         </Text>
         <Text>
@@ -125,10 +114,10 @@ function InsurerSnowcard() {
             radius="xl"
             color="red"
             component="a"
-            href="https://www.snowcard.co.uk"
+            href="https://www.dogtag.co.uk/quote/"
             target="_blank"
           >
-            Get a quote from Snowcard now!
+            Get a quote from Dogtag now!
           </Button>
         </Center>
       </Container>
@@ -136,4 +125,4 @@ function InsurerSnowcard() {
   );
 }
 
-export default InsurerSnowcard;
+export default InsurerDogtag;
