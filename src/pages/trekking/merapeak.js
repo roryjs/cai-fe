@@ -170,4 +170,4 @@ function TrekkingMeraPeak() {
   );
 }
 
-export default TrekkingIslandPeak;
+export default TrekkingMeraPeak;
