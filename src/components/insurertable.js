@@ -19,8 +19,9 @@ export const insurerDetails = [
     claims: "P J Hayman & Co Ltd",
     underwriter: "Lloyd’s",
     reviews: "https://uk.trustpilot.com/review/www.adventuresinsurance.co.uk",
+    residents: "UK only",
     trekking: {
-      limit: "9,000m",
+      limit: "6,000m",
       info: "",
     },
     backcountry_skiing: {
@@ -48,6 +49,7 @@ export const insurerDetails = [
     claims: "Claims Settlement Agencies",
     underwriter: "AWP P&C S.A.",
     reviews: "https://www.trustpilot.com/review/bigcattravelinsurance.com",
+    residents: "UK only",
     trekking: {
       limit: "7,000m in Nepal, no limit in other countries",
       info: "",
@@ -76,6 +78,7 @@ export const insurerDetails = [
     read_more_page: "/insurers/bmc",
     claims: "BMC",
     underwriter: "Antares Syndicate 1274 at Lloyd's",
+    residents: "UK only",
     trekking: {
       limit: "No limit",
       info: "",
@@ -100,6 +103,7 @@ export const insurerDetails = [
     read_more_page: "/insurers/campbellirvine",
     claims: "Claims Settlement Agencies",
     underwriter: "AWP P&C S.A.",
+    residents: "UK only",
     trekking: {
       limit: "7,000m",
       info: "Only guided and on recognised routes",
@@ -116,6 +120,7 @@ export const insurerDetails = [
     read_more_page: "/insurers/dogtag",
     claims: "TAURUS Insurance Services",
     underwriter: "Collinson Group Ltd",
+    residents: "UK only",
     reviews:
       "https://www.squaremouth.com/travel-insurance-providers/dogtag/reviews",
     trekking: {
@@ -146,6 +151,7 @@ export const insurerDetails = [
     read_more_page: "/insurers/snowcard",
     claims: "Allianz Assistance",
     underwriter: "AWP P&C S.A.",
+    residents: "UK only",
     trekking: {
       limit: "6,000m",
       info: "Additionally can cover Himalayan trekking peaks up to 7,000m.",
@@ -170,6 +176,7 @@ export const insurerDetails = [
     read_more_page: "/insurers/sportscoverdirect",
     claims: "Global Response",
     underwriter: "Catlin Insurance Company (UK) Ltd (AXA Group)",
+    residents: "UK only",
     trekking: {
       limit: "7,000m",
       info: "For non-technical ascents where there is no intention to use climbing equipment except in an emergency.",
@@ -194,6 +201,7 @@ export const insurerDetails = [
     read_more_page: "/insurers/truetraveller",
     claims: "In-house",
     underwriter: "Inter Partner Assistance S.A. (AXA Group).",
+    residents: "UK and Europe",
     trekking: {
       limit: "No limit",
       info: "Can include some Himalayan Trekking Peaks such as Island Peak, Mera Peak and Kyajo Ri.",

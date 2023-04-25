@@ -151,14 +151,77 @@ export default function App({ Component, pageProps }) {
                     <Menu.Item component={Link} href="/trekking/nepal">
                       Nepal
                     </Menu.Item>
-                    <Menu.Item component={Link} href="/trekking/islandpeak">
-                      Island Peak
-                    </Menu.Item>
-                    <Menu.Item component={Link} href="/trekking/merapeak">
-                      Mera Peak
-                    </Menu.Item>
                     <Menu.Item component={Link} href="/trekking/newzealand">
                       New Zealand
+                    </Menu.Item>
+                  </Menu.Dropdown>
+                </Menu>
+                <Menu trigger="hover" exitTransitionDuration={0}>
+                  <Menu.Target>
+                    <a className="menu-link">
+                      <Center>
+                        <span>Himalayan Peaks</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-chevron-down"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M6 9l6 6l6 -6" />
+                        </svg>
+                      </Center>
+                    </a>
+                  </Menu.Target>
+                  <Menu.Dropdown>
+                    <Menu.Item component={Link} href="/himalayanpeaks/merapeak">
+                      Mera Peak
+                    </Menu.Item>
+
+                    <Menu.Item
+                      component={Link}
+                      href="/himalayanpeaks/islandpeak"
+                    >
+                      Island Peak
+                    </Menu.Item>
+
+                    <Menu.Item
+                      component={Link}
+                      href="/himalayanpeaks/lobuchepeak"
+                    >
+                      Lobuche Peak
+                    </Menu.Item>
+
+                    <Menu.Item component={Link} href="/himalayanpeaks/kyajori">
+                      Kyajo Ri
+                    </Menu.Item>
+
+                    <Menu.Item component={Link} href="/himalayanpeaks/yalapeak">
+                      Yala Peak
+                    </Menu.Item>
+
+                    <Menu.Item
+                      component={Link}
+                      href="/himalayanpeaks/pisangpeak"
+                    >
+                      Pisang Peak
+                    </Menu.Item>
+
+                    <Menu.Item
+                      component={Link}
+                      href="/himalayanpeaks/chuluwest"
+                    >
+                      Chulu West
+                    </Menu.Item>
+
+                    <Menu.Item component={Link} href="/himalayanpeaks/tentpeak">
+                      Tent Peak
                     </Menu.Item>
                   </Menu.Dropdown>
                 </Menu>
