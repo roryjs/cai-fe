@@ -16,10 +16,26 @@ import {
   Button,
 } from "@mantine/core";
 import Link from "next/link";
+import Script from "next/script";
 
 export default function App({ Component, pageProps }) {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
+      <Head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-DM1Z1CD3FG"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-DM1Z1CD3FG');
+        `}
+        </Script>
+      </Head>
       <AppShell
         padding={0}
         header={
