@@ -16,7 +16,9 @@ import {
   Button,
 } from "@mantine/core";
 import Link from "next/link";
+//compareadventureinsurance.com
 import Script from "next/script";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
   return (
