@@ -23,21 +23,19 @@ import Head from "next/head";
 export default function App({ Component, pageProps }) {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
-      <Head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-DM1Z1CD3FG"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-DM1Z1CD3FG"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
           gtag('config', 'G-DM1Z1CD3FG');
         `}
-        </Script>
-      </Head>
+      </Script>
       <AppShell
         padding={0}
         header={
