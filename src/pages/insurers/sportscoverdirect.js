@@ -61,7 +61,7 @@ function InsurerSportsCoverDirect() {
           </Text>
           <Text>
             SportsCover direct is generally well reviewed with particular
-            comments on their phone advisors. TrueTraveller use the third-part
+            comments on their phone advisors. SportsCover use the third-part
             "Roger Rich & co" to manage claims.
           </Text>
         </Text>
